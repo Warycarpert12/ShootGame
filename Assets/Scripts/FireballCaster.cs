@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class FireballCaster : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Fireball FireballPrefab;
+    public Transform fireballSourceTransform; 
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+
+            Instantiate(FireballPrefab, fireballSourceTransform.position, fireballSourceTransform.rotation);
+
+        }
     }
 }
