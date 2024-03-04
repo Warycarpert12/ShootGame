@@ -480,6 +480,8 @@ GameObject:
   - component: {fileID: 585179277}
   - component: {fileID: 585179278}
   - component: {fileID: 585179279}
+  - component: {fileID: 585179280}
+  - component: {fileID: 585179281}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -545,6 +547,42 @@ MonoBehaviour:
   - {fileID: 1611333427}
   player: {fileID: 704274877}
   viewAngle: 90
+--- !u!114 &585179280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585179276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e356854b5c7bc4b8bf63136d886b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 100
+--- !u!136 &585179281
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585179276}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Height: 1.4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!1 &637021395
 GameObject:
   m_ObjectHideFlags: 0
