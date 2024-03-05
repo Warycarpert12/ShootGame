@@ -25,4 +25,9 @@ public class FireballSource : MonoBehaviour
 
         transform.LookAt(targetPoint.position);
     }
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 }
