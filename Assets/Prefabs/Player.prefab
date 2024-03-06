@@ -1024,6 +1024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8452389172489262894}
+  - component: {fileID: 1083440057414324344}
   m_Layer: 5
   m_Name: Game Over Screen
   m_TagString: Untagged
@@ -1053,6 +1054,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1083440057414324344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7809299477561214136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e193d43883566743b5f7ad39a1f3a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8625391689080784689
 GameObject:
   m_ObjectHideFlags: 0
