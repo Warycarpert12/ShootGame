@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &275207092007086208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246379097058821393}
+  m_Layer: 0
+  m_Name: Grenade Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &246379097058821393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275207092007086208}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.34066674, y: -0, z: -0, w: 0.9401842}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3731774706976063172}
+  m_LocalEulerAnglesHint: {x: -39.835, y: 0, z: 0}
 --- !u!1 &882123618306411049
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,6 +45,7 @@ GameObject:
   - component: {fileID: 4894312935437613547}
   - component: {fileID: 6855847516803363281}
   - component: {fileID: 5781644451698682471}
+  - component: {fileID: 8825280700265850902}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -131,6 +163,21 @@ MonoBehaviour:
   gameOverScreen: {fileID: 7809299477561214136}
   animator: {fileID: 6389696883006015238}
   _maxValue: 0
+--- !u!114 &8825280700265850902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882123618306411049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c70d172a40c0943992dc6c28651060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: -5056259945149954082, guid: 5e287f359423fc5478a3ed90107f5603, type: 3}
+  grenadeSourceTransform: {fileID: 246379097058821393}
+  force: 500
 --- !u!1 &1020060028482627908
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +509,8 @@ Transform:
   m_LocalPosition: {x: 0.841, y: 1.288, z: -0.123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 246379097058821393}
   m_Father: {fileID: 1357157013460310530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3712212541376931432
