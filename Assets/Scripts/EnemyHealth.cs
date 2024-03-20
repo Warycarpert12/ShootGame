@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
         if (value <= 0)
         {
             Destroy(gameObject);
+            
         }    
     }
    

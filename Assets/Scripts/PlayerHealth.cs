@@ -49,6 +49,6 @@ public class PlayerHealth : MonoBehaviour
     {
 
         valueRectTransform.anchorMax = new Vector2(value / _maxValue, 1);
-
+        
     }
 }
