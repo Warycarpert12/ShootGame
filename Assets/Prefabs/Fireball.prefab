@@ -53,7 +53,7 @@ MeshRenderer:
   m_GameObject: {fileID: 5170076321169952360}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -149,3 +149,4 @@ MonoBehaviour:
   Speed: 15
   lifetime: 8
   damage: 10
+  FireballSound: {fileID: 0}

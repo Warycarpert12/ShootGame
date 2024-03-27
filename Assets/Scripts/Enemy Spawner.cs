@@ -21,12 +21,14 @@ public class EnemySpawner : MonoBehaviour
     {
         _spawnerPoints = new List<Transform>(transform.GetComponentsInChildren<Transform>());
         _enemeies = new List<EnemeAI>();
+        Invoke("IncreaseEnemiesMaxCount", increaseEnemiesCountDelay);
     }
 
     private void IncreaseEnemiesMaxCount()
     {
         enemiesMaxCount++;
         Invoke("IncreaseEnemiesMaxCount", increaseEnemiesCountDelay);
+
     }
 
     private void Update()
