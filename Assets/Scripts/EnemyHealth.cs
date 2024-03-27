@@ -9,6 +9,11 @@ public class EnemyHealth : MonoBehaviour
 
     public PlayerProgress playerProgress;
 
+    public bool isAlive()
+    {
+        return value > 0;
+    }
+
     public void DealDamage(float damage)
     {
         playerProgress.AddExperience(damage);

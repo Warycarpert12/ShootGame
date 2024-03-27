@@ -56,6 +56,7 @@ public class PlayerProgress : MonoBehaviour
         {
             grenadeCaster.enabled = true;
         }
+        
 
     }
 

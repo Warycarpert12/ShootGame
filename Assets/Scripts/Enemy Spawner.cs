@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
 
     public int enemiesMaxCount = 5;
     public float spawnDelay = 5;
+    public float increaseEnemiesCountDelay = 30;
 
     private List<Transform> _spawnerPoints;
     private List<EnemeAI> _enemeies;
@@ -22,20 +23,35 @@ public class EnemySpawner : MonoBehaviour
         _enemeies = new List<EnemeAI>();
     }
 
+    private void IncreaseEnemiesMaxCount()
+    {
+        enemiesMaxCount++;
+        Invoke("IncreaseEnemiesMaxCount", increaseEnemiesCountDelay);
+    }
+
     private void Update()
     {
-        if (enemiesMaxCount <= _enemeies.Count) return;
-        if (Time.time - _timeLastSpawned < spawnDelay) return;
-        
-
-
+        CheckForDeadEnemies();
             CreateEnemy();
-        
+
+    }
+
+    private void CheckForDeadEnemies()
+    {
+        for (var i = 0; i < _enemeies.Count; i++)
+        {
+            if (_enemeies[i].IsAlive()) continue;
+            _enemeies.RemoveAt(i);
+            i--;
+        }
     }
 
     private void CreateEnemy()
     {
-       var enemy = Instantiate(enemyPrefab);
+        if (enemiesMaxCount <= _enemeies.Count) return;
+        if (Time.time - _timeLastSpawned < spawnDelay) return;
+
+        var enemy = Instantiate(enemyPrefab);
         enemy.transform.position = _spawnerPoints[Random.Range(0, _spawnerPoints.Count)].position;
         enemy.player = player;
         enemy.patrolPoints = patrolPoints;
